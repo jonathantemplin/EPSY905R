@@ -1,9 +1,26 @@
 Package: EPSY905R
-Version: 0.0.0.9000
-Title: What the Package Does (one line, title case)
-Description: What the package does (one paragraph).
-Authors@R: person("First", "Last", email = "first.last@example.com", role = c("aut", "cre"))
-License: What license is it under?
+Type: Package
+Title: Functions, files, and dependencies for Jonathan Templin's EPSY 905 course
+Version: 1.2.2018
+Author: person("Jonathan", "Templin", email = "jtemplin@ku.edu", role = c("aut", "cre"))
+Maintainer: Jonathan Templin <jtemplin@ku.edu>
+Description: Contains all functions, files, and dependencies for EPSY 905, taught by Jonathan Templin. Package version is labeled as (iteration with package).(semester:1=Fall, 2=Spring).(year)
+Depends: R (>= 3.4.1)
+License: GPL-3
 Encoding: UTF-8
 LazyData: true
-ByteCompile: true
+Imports:
+    lme4,
+    blavaan,
+    datasets,
+    fields,
+    lavaan,
+    mclust,
+    mice,
+    mnormt,
+    multcomp,
+    mvtnorm,
+    nlme,
+    semPlot
+RoxygenNote: 6.0.1
+Suggests: testthat
