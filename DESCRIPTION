@@ -1,4 +1,4 @@
-Package: EPSY905R
+lPackage: EPSY905R
 Type: Package
 Title: Functions, files, and dependencies for Jonathan Templin's EPSY 905 course
 Version: 1.2.2018
@@ -15,12 +15,12 @@ Imports:
     datasets,
     fields,
     lavaan,
+    lavaanPlot,
     mclust,
     mice,
     mnormt,
     multcomp,
     mvtnorm,
-    nlme,
-    semPlot
+    nlme
 RoxygenNote: 6.0.1
 Suggests: testthat
