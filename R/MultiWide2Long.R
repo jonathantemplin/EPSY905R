@@ -35,7 +35,6 @@
 #'                                   "conc.9")),
 #'                        timevals = 1:6, timevar = "time")
 #' long
-
 MultiWide2Long = function(data, idvars, varlist, timevals = 1:length(varlist[[1]]), timevar = "time"){
 
   newData = NULL
@@ -60,5 +59,3 @@ MultiWide2Long = function(data, idvars, varlist, timevals = 1:length(varlist[[1]
   return(newData)
 
 }
-
-
