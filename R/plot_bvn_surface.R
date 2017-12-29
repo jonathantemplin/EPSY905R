@@ -9,13 +9,6 @@
 #' @param zlab A character for the z-axis label
 #' @param main A character for the main label
 #' @return A plot of the surface of a bivariate normal with meanvec as the mean vector and covmat as the covariance matrix
-#' @examples
-#' plot_bvn_surface(meanvec = matrix(c(0,0), nrow = 2, ncol = 1),
-#'                  covmat = diag(2), type = "c", xlab = "x",
-#'                  ylab = "y", zlab = "f(x,y)", main = "contour plot")
-#' plot_bvn_surface(meanvec = matrix(c(0,0), nrow = 2, ncol = 1),
-#'                  covmat = diag(2), type = "p", xlab = "x",
-#'                  ylab = "y", zlab = "f(x,y)", main = "drape plot")
 plot_bvn_surface = function(meanvec, covmat, type, xlab, ylab, zlab, main){
 
   #creating values for x and y axes based on estimated values from model
@@ -35,4 +28,5 @@ plot_bvn_surface = function(meanvec, covmat, type, xlab, ylab, zlab, main){
   out = list(x = grid.list$x, y = grid.list$y, z = z)
 
   fields::plot.surface(out,type=type, xlab=xlab, ylab=ylab, zlab=zlab, main=main)
+  return(TRUE)
 }

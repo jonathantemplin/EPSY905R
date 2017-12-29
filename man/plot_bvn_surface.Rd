@@ -27,11 +27,3 @@ A plot of the surface of a bivariate normal with meanvec as the mean vector and 
 \description{
 A function that plots the surface of a bivariate normal distribution
 }
-\examples{
-plot_bvn_surface(meanvec = matrix(c(0,0), nrow = 2, ncol = 1),
-                 covmat = diag(2), type = "c", xlab = "x",
-                 ylab = "y", zlab = "f(x,y)", main = "contour plot")
-plot_bvn_surface(meanvec = matrix(c(0,0), nrow = 2, ncol = 1),
-                 covmat = diag(2), type = "p", xlab = "x",
-                 ylab = "y", zlab = "f(x,y)", main = "drape plot")
-}

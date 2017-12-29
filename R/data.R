@@ -15,7 +15,7 @@
 #' Data file for examples used in EPSY 905
 #'
 #' A dataset containing the data for interactions examples
-#'
+
 #'
 #' @format A data frame with 100 observations and 5 variables
 #' \describe{
@@ -27,18 +27,6 @@
 #' }
 "dataTestExperiment"
 
-#' Data file for examples used in EPSY 905
-#'
-#' A dataset containing five observations used to show likelihoods
-#'
-#'
-#' @format A data frame with 5 observations and 3 variables
-#' \describe{
-#'   \item{id}{id number}
-#'   \item{iq}{IQ score}
-#'   \item{Perf}{Job performance score}
-#' }
-"dataPerfIQ"
 
 #' Data file for examples used in EPSY 905
 #'
