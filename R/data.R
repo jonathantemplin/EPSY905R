@@ -1,4 +1,4 @@
-#' Data file for examples used in EPSY 905
+#' dataSexHeightWeight: Data file for examples used in EPSY 905
 #'
 #' A dataset containing the heights, weights, and sex of 20 hypothetical people
 #'

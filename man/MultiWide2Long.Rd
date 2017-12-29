@@ -2,7 +2,8 @@
 % Please edit documentation in R/MultiWide2Long.R
 \name{MultiWide2Long}
 \alias{MultiWide2Long}
-\title{A function that plots the surface of a bivariate normal distribution}
+\title{A function that reshapes data from wide format to long format
+when multiple variables are present.}
 \usage{
 MultiWide2Long(data, idvars, varlist, timevals = 1:length(varlist[[1]]),
   timevar = "time")
@@ -10,19 +11,26 @@ MultiWide2Long(data, idvars, varlist, timevals = 1:length(varlist[[1]]),
 \arguments{
 \item{data}{A data frame that is wide format.}
 
-\item{idvars}{The id variable(s) that identify multiple records from the same unit.}
+\item{idvars}{The id variable(s) that identify multiple records from the
+same unit.}
 
-\item{varlist}{A list of length equal to the number of variables to be reshaped from wide to long. The names of the elements will make up the
-names of the new long-format variables. Each element of the list is a character vector that contains the variable names in data
-that are to be reshaped. All elements must have character vectors of the same length}
+\item{varlist}{A list of length equal to the number of variables to be
+reshaped from wide to long. The names of the elements will make up the
+names of the new long-format variables. Each element of the list is a
+character vector that contains the variable names in data that are to
+be reshaped. All elements must have character vectors of the same length.}
 
-\item{timevals}{A vector of numbers to use for time. Length must be equal to the size of the elements in varlist. Can be NA for no time.}
+\item{timevals}{A vector of numbers to use for time. Length must be equal
+to the size of the elements in varlist. Can be NA for no time.}
 
-\item{timevar}{A character containing the name of the new time variable. Can be NA for default name or no name if timevar is NA.}
+\item{timevar}{A character containing the name of the new time variable.
+Can be NA for default name or no name if timevar is NA.}
 }
 \value{
 A data frome in long format
 }
 \description{
-A function that plots the surface of a bivariate normal distribution
+Used for reshaping data more extensively than the \code{reshape},
+\code{melt}, or \code{reshape2} functions available. Can reshape multiple
+wide-format variables into long format.
 }

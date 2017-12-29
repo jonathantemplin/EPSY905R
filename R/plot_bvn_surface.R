@@ -9,6 +9,7 @@
 #' @param zlab A character for the z-axis label
 #' @param main A character for the main label
 #' @return A plot of the surface of a bivariate normal with meanvec as the mean vector and covmat as the covariance matrix
+#' @export
 plot_bvn_surface = function(meanvec, covmat, type, xlab, ylab, zlab, main){
 
   #creating values for x and y axes based on estimated values from model
