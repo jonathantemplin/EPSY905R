@@ -7,11 +7,14 @@
 plot_bvn_surface(meanvec, covmat, type, xlab, ylab, zlab, main)
 }
 \arguments{
-\item{meanvec}{A matrix with 2 rows andone column that stores the mean of the bivariate normal distribution}
+\item{meanvec}{A matrix with 2 rows andone column that stores the mean of the
+bivariate normal distribution}
 
 \item{covmat}{A 2 by 2 symmetric covariance matrix}
 
-\item{type}{A character stating the type of plot from the plot.surface function of the fields package ("c" is a contour, "p" is a perspective/drape plot)}
+\item{type}{A character stating the type of plot from the plot.surface
+function of the fields package ("c" is a contour, "p" is a perspective/drape
+plot)}
 
 \item{xlab}{A character for the x-axis label}
 
@@ -22,8 +25,10 @@ plot_bvn_surface(meanvec, covmat, type, xlab, ylab, zlab, main)
 \item{main}{A character for the main label}
 }
 \value{
-A plot of the surface of a bivariate normal with meanvec as the mean vector and covmat as the covariance matrix
+A plot of the surface of a bivariate normal with meanvec as the mean
+ vector and covmat as the covariance matrix
 }
 \description{
-A function that plots the surface of a bivariate normal distribution
+Makes plotting the bivariate normal distribution easier. Uses \code{mnormt}
+and \code{fields} packages.
 }
