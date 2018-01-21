@@ -20,6 +20,34 @@
 #' @return A data frome in long format
 #' @name MultiWide2Long
 #' @export
+#'
+#' @examples
+#' summary(Indometh)
+#' wide <- reshape(Indometh, v.names = "conc", idvar = "Subject",
+#'                 timevar = "time", direction = "wide")
+#' #add additional column so reshape has same size for two variables
+#' wide$conc.9 = runif(n = 6, min = 0, max = .05)
+#' wide
+#'
+#'
+#'   long <- MultiWide2Long(data = wide, idvars = "Subject",
+#'                          varlist =
+#'                            list(ConcLE2 =
+#'                                   c("conc.0.25",
+#'                                     "conc.0.5",
+#'                                     "conc.0.75",
+#'                                     "conc.1",
+#'                                     "conc.1.25",
+#'                                     "conc.2"),
+#'                                 ConcGT2 =
+#'                                   c("conc.3",
+#'                                     "conc.4",
+#'                                     "conc.5",
+#'                                     "conc.6",
+#'                                     "conc.8",
+#'                                     "conc.9")),
+#'                          timevals = 1:6, timevar = "time")
+#'   long
 MultiWide2Long = function(data, idvars, varlist, timevals = 1:length(varlist[[1]]), timevar = "time"){
 
   newData = NULL
@@ -40,9 +68,8 @@ MultiWide2Long = function(data, idvars, varlist, timevals = 1:length(varlist[[1]
     }
 
   }
-
+  timeNameVar = which(names(newData) == "time")
+  names(newData)[timeNameVar] = timevar
   return(newData)
 
 }
-
-
