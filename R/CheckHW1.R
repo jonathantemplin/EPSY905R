@@ -24,37 +24,37 @@ CheckHW1 = function(Husbands = NULL, Wives = NULL, FamilyWide = NULL, FamilyLong
 
   score = 0
   errors = NULL
-  if (identical(Husbands, f)){
+  if (checkFrameContents(Husbands, f)){
     score = score + 1
   } else {
     errors = c(errors, "Husbands data frame is incorrect")
   }
 
-  if (identical(Wives, j)){
+  if (checkFrameContents(Wives, j)){
     score = score + 1
   } else {
     errors = c(errors, "Wives data frame is incorrect")
   }
 
-  if (identical(FamilyWide, b)){
+  if (checkFrameContents(FamilyWide, b)){
     score = score + 1
   } else {
     errors = c(errors, "FamilyWide data frame is incorrect")
   }
 
-  if (identical(FamilyLong, h)){
+  if (checkFrameContents(FamilyLong, h)){
     score = score + 1
   } else {
     errors = c(errors, "FamilyLong data frame is incorrect")
   }
 
-  if (identical(DescriptivesFW, z)){
+  if (checkFrameContents(DescriptivesFW, z)){
     score = score + 1
   } else {
     errors = c(errors, "DescriptivesFW data frame is incorrect")
   }
 
-  if (identical(DescriptivesFL, l)){
+  if (checkFrameContents(DescriptivesFL, l)){
     score = score + 1
   } else {
     errors = c(errors, "DescriptivesFL data frame is incorrect")
@@ -66,13 +66,13 @@ CheckHW1 = function(Husbands = NULL, Wives = NULL, FamilyWide = NULL, FamilyLong
     errors = c(errors, "DescriptivesFLTime data frame is incorrect")
   }
 
-  if (identical(FamilyLong2, p)){
+  if (checkFrameContents(FamilyLong2, p)){
     score = score + 1
   } else {
     errors = c(errors, "FamilyLong2 data frame is incorrect")
   }
 
-  if (identical(FamilyLong3, o)){
+  if (checkFrameContents(FamilyLong3, o)){
     score = score + 1
   } else {
     errors = c(errors, "FamilyLong3 data frame is incorrect")
@@ -90,3 +90,44 @@ CheckHW1 = function(Husbands = NULL, Wives = NULL, FamilyWide = NULL, FamilyLong
 
 
 }
+
+# checks each variable from df1 to see if it is copied in df2
+checkFrameContents = function(df1, df2){
+
+  if (!identical(dim(df1), dim(df2))){
+    return(FALSE)
+  }
+
+  df1Cols = 1:ncol(df1)
+  df2Cols = 1:ncol(df2)
+
+  endWhile = FALSE
+  while (!endWhile) {
+    cur1 = df1Cols[1]
+
+    foundMatch = FALSE
+    for (col in 1:length(df2Cols)){
+
+      cur2 = df2Cols[col]
+      if (identical(df1[,cur1], df2[,cur2])){
+        foundMatch = TRUE
+        df1Cols = df1Cols[which(df1Cols != cur1)]
+        df2Cols = df2Cols[which(df2Cols != cur2)]
+        break
+      }
+
+
+    }
+
+    if (!foundMatch) endWhile = TRUE
+    if (length(df1Cols)==0 & length(df2Cols)==0) endWhile = TRUE
+  }
+
+  if (!foundMatch) {
+    return(FALSE)
+  } else {
+    return(TRUE)
+  }
+
+}
+
