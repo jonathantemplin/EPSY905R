@@ -60,10 +60,11 @@ CheckHW1 = function(Husbands = NULL, Wives = NULL, FamilyWide = NULL, FamilyLong
     errors = c(errors, "DescriptivesFL data frame is incorrect")
   }
 
-  if (identical(DescriptivesFLTime, a)){
+  allCheck = unlist(lapply(X = 1:4, FUN = function(x){checkFrameContents(DescriptivesFLTime[[x]], a[[x]])}))
+  if (all(allCheck)){
     score = score + 1
   } else {
-    errors = c(errors, "DescriptivesFLTime data frame is incorrect")
+    errors = c(errors, "DescriptivesFLTime list is incorrect")
   }
 
   if (checkFrameContents(FamilyLong2, p)){
