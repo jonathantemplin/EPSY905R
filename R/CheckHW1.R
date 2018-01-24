@@ -15,7 +15,7 @@
 #' @return The score for HW1 if this file was submitted for credit.
 #' @name CheckHW1
 #' @export
-CheckHW1 = function(Husbands, Wives, FamilyWide, FamilyLong, DescriptivesFW, DescriptivesFL, DescriptivesFLTime, FamilyLong2, FamilyLong3){
+CheckHW1 = function(Husbands = NULL, Wives = NULL, FamilyWide = NULL, FamilyLong = NULL, DescriptivesFW = NULL, DescriptivesFL = NULL, DescriptivesFLTime = NULL, FamilyLong2 = NULL, FamilyLong3 = NULL){
 
 
   tryCatch(load(url("https://jonathantemplin.com/files/multivariate/mv18epsy905/HW1check.RData")),
