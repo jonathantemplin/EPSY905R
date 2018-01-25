@@ -110,7 +110,7 @@ checkFrameContents = function(df1, df2){
     for (col in 1:length(df2Cols)){
 
       cur2 = df2Cols[col]
-      if (identical(df1[,cur1], df2[,cur2])){
+      if (identical(as.integer(df1[,cur1]), as.integer(df2[,cur2]))){
         foundMatch = TRUE
         df1Cols = df1Cols[which(df1Cols != cur1)]
         df2Cols = df2Cols[which(df2Cols != cur2)]
