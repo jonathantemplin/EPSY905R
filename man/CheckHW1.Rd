@@ -4,8 +4,17 @@
 \alias{CheckHW1}
 \title{Function to check results of HW1 before submitting.}
 \usage{
-CheckHW1(Husbands, Wives, FamilyWide, FamilyLong, DescriptivesFW,
-  DescriptivesFL, DescriptivesFLTime, FamilyLong2, FamilyLong3)
+CheckHW1(
+  Husbands = NULL,
+  Wives = NULL,
+  FamilyWide = NULL,
+  FamilyLong = NULL,
+  DescriptivesFW = NULL,
+  DescriptivesFL = NULL,
+  DescriptivesFLTime = NULL,
+  FamilyLong2 = NULL,
+  FamilyLong3 = NULL
+)
 }
 \arguments{
 \item{Husbands}{A data frame from Question #1}

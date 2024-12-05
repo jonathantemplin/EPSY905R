@@ -4,13 +4,15 @@
 \name{dataSexHeightWeight}
 \alias{dataSexHeightWeight}
 \title{dataSexHeightWeight: Data file for examples used in EPSY 905}
-\format{A data frame with 20 observations and 4 variables
+\format{
+A data frame with 20 observations and 4 variables
 \describe{
   \item{id}{id number}
   \item{sex}{sex of person}
   \item{heightIN}{height in inches}
   \item{weightLB}{weight in pounds}
-}}
+}
+}
 \usage{
 dataSexHeightWeight
 }

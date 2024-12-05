@@ -4,7 +4,8 @@
 \name{dataMath}
 \alias{dataMath}
 \title{Data file for examples used in EPSY 905}
-\format{A data frame with 350 observations and 9 variables
+\format{
+A data frame with 350 observations and 9 variables
 \describe{
   \item{id}{id number}
   \item{hsl}{Mathematics courses taken in high school}
@@ -15,7 +16,8 @@
   \item{mse}{Mathematics self efficacy score}
   \item{perf}{Performance on mathematics test (number correct out of 20 items)}
   \item{female}{Dummy coded sex where female = 1}
-}}
+}
+}
 \usage{
 dataMath
 }

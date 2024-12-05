@@ -2,4 +2,6 @@
 
 export(CheckHW1)
 export(MultiWide2Long)
+export(homework)
 export(plot_bvn_surface)
+export(show_table)

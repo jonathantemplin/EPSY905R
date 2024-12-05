@@ -4,7 +4,8 @@
 \name{dataExercise}
 \alias{dataExercise}
 \title{Data file for examples used in EPSY 905}
-\format{A data frame with 18 observations and 6 variables
+\format{
+A data frame with 18 observations and 6 variables
 \describe{
   \item{exertype}{Type of exercise (experimental group; 1=stair climbing; 2=Racquetball; 3=Weight training)}
   \item{pulse1}{Pulse rate after warm up}
@@ -12,7 +13,8 @@
   \item{pulse3}{Pulse rate after running}
   \item{diet}{diet group (1= vegetarians; 2 = omnivores)}
   \item{id}{id number}
-}}
+}
+}
 \usage{
 dataExercise
 }

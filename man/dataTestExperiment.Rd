@@ -4,14 +4,16 @@
 \name{dataTestExperiment}
 \alias{dataTestExperiment}
 \title{Data file for examples used in EPSY 905}
-\format{A data frame with 100 observations and 5 variables
+\format{
+A data frame with 100 observations and 5 variables
 \describe{
   \item{PersonID}{Id number}
   \item{Senior}{Dummy-coded indicator of a person's status as a Senior (vs. Freshman)}
   \item{New}{Dummy-coded indicator of a person's status as being in the New type of instruction group (vs. Old)}
   \item{Group}{Numeric gruop number produced from permutation of Senior and New (four groups total)}
   \item{Test}{Test score}
-}}
+}
+}
 \usage{
 dataTestExperiment
 }

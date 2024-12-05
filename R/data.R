@@ -1,3 +1,15 @@
+#' dataIQ: Data file for examples used in EPSY 905
+#'
+#' A dataset containing the perf (Performance), iq (IQ) of 5 hypothetical people
+#'
+#'
+#' @format A data frame with 5 observations and 2 variables
+#' \describe{
+#'   \item{perf}{Performance}
+#'   \item{iq}{IQ}
+#' }
+"dataIQ"
+
 #' dataSexHeightWeight: Data file for examples used in EPSY 905
 #'
 #' A dataset containing the heights, weights, and sex of 20 hypothetical people
@@ -76,3 +88,20 @@
 #' }
 "dataExercise"
 
+#' Data file for examples used in EPSY 905
+#'
+#' Data come from a survey of 400 college juniors looking at factors that influence the decision to apply to graduate school
+#'
+#'
+#' @format A data frame with 400 observations and 4 variables
+#' \describe{
+#'   \item{APPLY}{student rating of likelihood he/she will apply to grad school – (0 = unlikely; 1 = somewhat likely; 2 = very likely)}
+#'   \item{PARED}{ParentEd: indicator (0/1) if one or more parent has graduate degree}
+#'   \item{PUBLIC}{Public: indicator (0/1) if student attends a public university}
+#'   \item{GPA}{GPA: grade point average on 4 point scale (4.0 = perfect)}
+#' }
+"dataLogit"
+
+
+# save(dataLogit, file = "data/dataLogit.rda")
+# dataLogit$LLAPPLY <- ifelse(dataLogit$APPLY %in% c(1, 2), 1, dataLogit$APPLY)

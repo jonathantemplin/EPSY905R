@@ -4,12 +4,14 @@
 \name{dataSAT}
 \alias{dataSAT}
 \title{Data file for examples used in EPSY 905}
-\format{A data frame with 5 observations and 3 variables
+\format{
+A data frame with 5 observations and 3 variables
 \describe{
   \item{id}{id number}
   \item{SATV}{SAT Verbal score}
   \item{SATM}{SAT Math score}
-}}
+}
+}
 \usage{
 dataSAT
 }

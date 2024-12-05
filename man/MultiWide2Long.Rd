@@ -5,8 +5,13 @@
 \title{A function that reshapes data from wide format to long format
 when multiple variables are present.}
 \usage{
-MultiWide2Long(data, idvars, varlist, timevals = 1:length(varlist[[1]]),
-  timevar = "time")
+MultiWide2Long(
+  data,
+  idvars,
+  varlist,
+  timevals = 1:length(varlist[[1]]),
+  timevar = "time"
+)
 }
 \arguments{
 \item{data}{A data frame that is wide format.}
